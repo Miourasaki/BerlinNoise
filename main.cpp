@@ -3,7 +3,7 @@
 #include <cmath>
 
 
-int fastFloor(double x)
+int fastFloor(const double x)
 {
     return x > 0 ? (int) x : (int) x - 1;
 }
