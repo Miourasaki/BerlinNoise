@@ -124,13 +124,13 @@ int main()
                 } else if (result >= 0)
                 {
                     std::cout << "\033[44m" << "  " << "\033[0m";
-                } else if (result >= -0.2)
+                } else if (result >= -0.35)
                 {
                     std::cout << "\033[43m" << "  " << "\033[0m";
-                } else if (result >= -0.4)
+                } else if (result >= -0.5)
                 {
                     std::cout << "\033[42m" << "  " << "\033[0m";
-                } else if (result >= -0.6)
+                } else if (result >= -0.75)
                 {
                     std::cout << "\033[41m" << "  " << "\033[0m";
                 } else
