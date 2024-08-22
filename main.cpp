@@ -107,26 +107,26 @@ int main()
         for (double j = ox ; j <= ox + line ; j+=0.1) {
             double result = berlin2d(i+100, j+100);
             if (result  >= 0.75) {
-                std::cout << "\033[47m" << "   " << "\033[0m";
+                std::cout << "\033[47m" << "  " << "\033[0m";
             }else if (result  >= 0.5) {
-                std::cout << "\033[46m" << "   " << "\033[0m";
+                std::cout << "\033[46m" << "  " << "\033[0m";
             }else if (result  >= 0.25) {
-                std::cout << "\033[45m" << "   " << "\033[0m";
+                std::cout << "\033[45m" << "  " << "\033[0m";
             }else if (result  >= 0) {
-                std::cout << "\033[44m" << "   " << "\033[0m";
+                std::cout << "\033[44m" << "  " << "\033[0m";
             }else if (result  >= -0.2) {
-                std::cout << "\033[43m" << "   " << "\033[0m";
+                std::cout << "\033[43m" << "  " << "\033[0m";
             }else if (result  >= -0.4) {
-                std::cout << "\033[42m" << "   " << "\033[0m";
+                std::cout << "\033[42m" << "  " << "\033[0m";
             }else if (result  >= -0.6) {
-                std::cout << "\033[41m" << "   " << "\033[0m";
+                std::cout << "\033[41m" << "  " << "\033[0m";
             }else {
-                std::cout << "\033[40m" << "   " << "\033[0m";
+                std::cout << "\033[40m" << "  " << "\033[0m";
             }
 
         }
         std::cout << std::endl;
     }
 
-
+    if (std::cin >> line) {}
 }
