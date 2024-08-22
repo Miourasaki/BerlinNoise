@@ -1,7 +1,6 @@
 #include <iostream>
-#include <bitset>
 #include <random>
-#include <limits>
+#include <cmath>
 
 
 int fastFloor(double x)
@@ -78,28 +77,19 @@ double berlin2d(double x, double y)
     return v3;
 }
 
-
 int main()
 {
 
     for (;;)
     {
 
-        double seed, ox, oy, line;
-//    std::cout << "input seed ↓" << std::endl;
-//    if (!(std::cin >> seed)) {
-//        std::cerr << "Error reading seed." << std::endl;
-//        return 1;
-//    }
-//
-//    std::random_device rd;
-//    std::mt19937_64 gen(rd());
-//    std::uniform_int_distribution<uint64_t> dist(0, std::numeric_limits<uint64_t>::max());
-//
-//    for (size_t i = 0; i < 255; i++) {
-//        p[i] = dist(gen) & 1; // 随机生成 0 或 1
-//    }
-
+        double ox, oy, line;
+        int cont;
+        std::cout << "Number of superpositions ↓" << std::endl;
+        if (!(std::cin >> cont)) {
+            std::cerr << "Error reading seed." << std::endl;
+            return 1;
+        }
         std::cout << "input start point ↓ x (space) y" << std::endl;
         if (!(std::cin >> ox >> oy))
         {
@@ -117,7 +107,11 @@ int main()
         {
             for (double j = ox; j <= ox + line; j += 0.1)
             {
-                double result = berlin2d(i + 100, j + 100);
+                double result = 0.0;
+                for (int c =0 ; c<cont ; c++) {
+                    double r1 = pow(2, 0-i) * berlin2d(i * pow(2, i), j * pow(2, i));
+                    result += r1;
+                }
                 if (result >= 0.75)
                 {
                     std::cout << "\033[47m" << "  " << "\033[0m";
