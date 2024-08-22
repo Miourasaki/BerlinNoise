@@ -109,7 +109,7 @@ int main()
             {
                 double result = 0.0;
                 for (int c =0 ; c<cont ; c++) {
-                    double r1 = pow(2, 0-i) * berlin2d(i * pow(2, i), j * pow(2, i));
+                    double r1 = pow(2, 0-c) * berlin2d(i * pow(2, c), j * pow(2, c));
                     result += r1;
                 }
                 if (result >= 0.75)
